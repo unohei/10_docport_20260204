@@ -1,16 +1,51 @@
-# React + Vite
+<p align="left">
+  <img src="screenshots/login.png" width="50%" />
+</p>
+# Doc Port（病院間ドキュメント共有支援システム）
+**送らない共有。置くだけ連携。**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+DocPort は、病院間での FAX・電話・紙に依存した情報共有を置き換えるための  
+**病院専用・シンプルなドキュメント共有 Web アプリ**です。
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 主な機能
 
-## React Compiler
+<p align="left">
+  <img src="screenshots/put.png" width="50%" />
+</p>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 置く
 
-## Expanding the ESLint configuration
+- PDFをドラッグ＆ドロップで配置
+- 宛先病院を選択して「置く」だけ
+- 誰に送るか・いつ送るかを考えない設計
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 受け取る
+
+- 自院宛ての資料を一覧表示
+- 未読 / 既読 / 期限切れ / 取消 を色分け表示
+- PDFはクリックで即時確認
+
+### 記録
+
+- 自院が置いた履歴を一覧で確認
+- 未読・期限内であれば取り消し可能
+- 「確認されたかどうか」が状態で分かる
+
+---
+
+## 技術構成
+
+- フロントエンド：React / Vite
+- 認証・DB：Supabase（Auth / PostgreSQL）
+- ストレージ：Cloudflare R2
+
+---
+
+## 今後の展望
+
+- Word等の自動PDF変換
+- AIによるPDF要約・宛先病院候補提案
+- 病院内権限分離
+- 監査ログの拡張
