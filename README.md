@@ -1,7 +1,9 @@
 <p align="left">
   <img src="screenshots/login.png" width="50%" />
 </p>
+
 # Doc Port（病院間ドキュメント共有支援システム）
+
 **送らない共有。置くだけ連携。**
 
 DocPort は、病院間での FAX・電話・紙に依存した情報共有を置き換えるための  
