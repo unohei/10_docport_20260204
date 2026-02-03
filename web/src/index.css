@@ -1,0 +1,43 @@
+/* index.css (DocPort用: 最小ベース) */
+:root {
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Helvetica,
+    Arial,
+    "Apple Color Emoji",
+    "Segoe UI Emoji";
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  /* Viteテンプレの中央寄せを消す */
+  display: block;
+  min-width: 320px;
+}
+
+/* 横幅の揺れ（スクロールバー出入り）対策：PCで効く */
+html {
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+}
+
+/* ボタンは App.jsx 側でスタイルしてるので、グローバルは極力触らない */
+button {
+  font-family: inherit;
+}
